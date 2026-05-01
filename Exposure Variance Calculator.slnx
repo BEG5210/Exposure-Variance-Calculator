@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Exposure Variance Calculator/Exposure Variance Calculator.vcxproj" Id="3360dc5a-88f1-4de9-b7d0-72666775f414" />
+</Solution>
