@@ -17,8 +17,7 @@ void main()
 		<< "	Author:	Thomas Federico" << endl
 		<< "	Last Update:	29 - 4 - 2026" << endl
 		<< endl
-		<< "	This software, its code, and its future and previous versions are under a CC BY-NC-SA 4.0 license." << endl
-		<< "	https://creativecommons.org/licenses/by-nc-sa/4.0/" << endl
+		<< "	This software, its code, and its future and previous versions are under a GNU Affero General Public V3.0 License" << endl
 		<< endl;
 
 	// Print tutorial
