@@ -2,11 +2,11 @@
 
 #pragma once
 
-// #include <iostream>
+#include <iostream>
 
 class PrintBasicThings {
 public:
-	void printCopyRight(const bool verbose) {
+	void printCopyright(const bool verbose) {
 		// prints the copyright information, and weather it is verbose or not
 	}
 };
