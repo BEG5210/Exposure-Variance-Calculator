@@ -4,6 +4,7 @@
 #include <iostream>
 using std::cout;
 using std::endl;
+using std::string;
 
 void printCopyright(const bool verbose = false);
 void printCopyright(const bool verbose) {
