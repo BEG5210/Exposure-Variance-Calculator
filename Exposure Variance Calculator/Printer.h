@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include <iostream>
@@ -14,14 +13,21 @@ void printCopyright(/*const bool verbose*/) {
 			<< endl;
 }
 
-void printRepoInf(/*const bool verbose*/) {
+void printRepoInf() {
 	cout	<< "find out more about this program and its project here: https://github.com/BEG5210/Exposure-Variance-Calculator.git" << endl
 			<< endl;
 }
 
-void printTutorial(/*const bool verbose*/) {
-	cout	<< "If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful." << std::endl
-			<< endl;
+void printTutorial(const bool verbose = false);
+void printTutorial(const bool verbose) {
+
+	if (verbose) {
+		cout << "[VERBOSE] If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful.";
+	} else {
+		cout << "If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful.";
+	}
+
+	cout << endl << endl;
 }
 
 void printValues(const float shutterSpeed, const float apeature, const int iso) {
