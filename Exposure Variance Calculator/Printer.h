@@ -21,7 +21,7 @@ void printCopyright(const bool verbose) {
 			<< endl;
 }
 
-void printRepoInf(const string url = "https://github.com/BEG5210/Exposure-Variance-Calculator.git");
+void printRepoInf(const string url = repoUrl);
 void printRepoInf(const string url) {
 	cout	<< "To find out more about this program and the project, visit this link: " << url << endl
 			<< endl;
