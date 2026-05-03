@@ -30,29 +30,31 @@ float getValidNumber(string message) {
     }
 }
 
+void closeProgram() {
+	cout << "Press [ENTER] to close.";
+
+	cin.ignore();
+	cin.get();
+
+	cout << "Closing . . .";
+}
+
 int main()
 {
 
 	// Print Copyright information
-	cout	<< "Copyright Information:" << endl
-			<< "	Author:	Thomas Federico" << endl
-			<< "	Last Update:	29 - 4 - 2026" << endl
-			<< endl
-			<< "	This software, its code, and its future and previous versions are under a GNU Affero General Public V3.0 License" << endl
-			<< endl;
+	printCopyright();
 
 	// Print repo information
-	cout	<< "find out more about this program and its project here: https://github.com/BEG5210/Exposure-Variance-Calculator.git" << endl
-			<< endl;
+	printRepoInf();
 
 	// Print tutorial
-	cout	<< "If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful." << std::endl
-			<< endl;
+	printTutorial();
 
 	// Define Values
-	float inshutterSpeed;	// [1/A]	shutterSpeed = A
-	float inaperture;		// [fA]		aperture = A
-	int iniso; 
+	float shutterSpeed;	// [1/A]	shutterSpeed = A
+	float aperture;		// [fA]		aperture = A
+	int iso; 
 
 	// Input Values
 	/* 
@@ -71,40 +73,29 @@ int main()
 
 	*/
 
-	inshutterSpeed = getValidNumber("    input shutter speed value (1/[valToInput]): ");
-    inaperture     = getValidNumber("    input aperture value (f[valToInput]): ");// ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
-    iniso          = (int)getValidNumber("    input iso: ");
+	shutterSpeed = getValidNumber("    input shutter speed value (1/[valToInput]): ");
+    aperture     = getValidNumber("    input aperture value (f[valToInput]): ");// ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
+    iso          = (int)getValidNumber("    input iso: ");
 	cout	<< endl;
 
 	// Display Values
-	cout	<< "Inputted Values:" << endl
-			<< "	shutterSpeed:	" << "1/" << inshutterSpeed << "	[" << 1/inshutterSpeed << "]" << endl
-			<< "	aperture:	f/" << inaperture << "	[" << inaperture << "]" << endl
-			<< "	iso:		" << iniso << "	[" << iniso << "]" << endl
-			<< endl;
+	printValues(shutterSpeed, aperture, iso);
 
 	// Display Equation
-	cout	<< "Equation [with values subbed in]:	log2[( " << inaperture << "^2 * 100 ) / ( " << 1/inshutterSpeed << " * " << iniso << " )]" << endl
-			<< endl;
+	printEquation(shutterSpeed, aperture, iso);
 
 	// Calculate Equation
 	cout	<< "Calculating Equation:" << endl
 			<< "	Calculating..." << endl;
-	const float EVoutput = CalculateExposureVariance(inshutterSpeed, inaperture, iniso);
+	const float EVoutput = CalculateExposureVariance(shutterSpeed, aperture, iso);
 	cout	<< "	Calculated Successfully!" << endl
 			<< endl;
 
 	// Display Answer
-	cout	<< "Exposure Variance Equals:	" << EVoutput << endl	//also print equivalent scenes for this EV.
-			<< endl;
+	printAnswer(EVoutput);
 
 	// Close Program
-	cout << "Press [ENTER] to close.";
-
-	cin.ignore();
-	cin.get();
-
-	cout << "Closing . . .";
+	closeProgram();
 
 	return 0;
 }
