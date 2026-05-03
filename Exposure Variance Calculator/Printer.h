@@ -28,19 +28,27 @@ void printTutorial(const bool verbose = false);
 void printTutorial(const bool verbose) {
 
 	if (verbose) {
-		cout << "[VERBOSE] If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful.";
+		cout	<< "[VERBOSE] If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful.";
 	} else {
-		cout << "If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful.";
+		cout	<< "If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful.";
 	}
 
 	cout << endl << endl;
 }
 
-void printValues(const float shutterSpeed, const float apeature, const int iso) {
-	cout	<< "Inputted Values:" << endl
-			<< "	shutterSpeed:	" << "1/" << shutterSpeed << "	[" << 1 / shutterSpeed << "]" << endl
-			<< "	aperture:	f/" << apeature << "	[" << apeature << "]" << endl
-			<< "	iso:		" << iso << "	[" << iso << "]" << endl
+void printValues(const float shutterSpeed, const float apeature, const int iso, const bool verbose = false);
+void printValues(const float shutterSpeed, const float apeature, const int iso, const bool verbose) {
+	cout	<< "Inputted Values:" << endl;
+
+	if(verbose) {
+		cout	<< "	shutterSpeed:	" << "1/" << shutterSpeed << "	[" << 1 / shutterSpeed << "]" << endl
+				<< "	aperture:	f/" << apeature << "	[" << apeature << "]" << endl
+				<< "	iso:		" << iso << "	[" << iso << "]";
+	} else {
+		cout	<< "	[" << shutterSpeed << ",	" << apeature << ",	" << iso << "]";
+	}
+
+	cout	<< endl
 			<< endl;
 }
 
@@ -56,8 +64,8 @@ void printEquation() {
 
 //Reccomended you use `CalculateExposureVariance(shutterSpeed, aperture, iso)` if performing this in main.
 void printAnswer(const float EVoutput) {
-	cout << "Exposure Variance Equals:	" << EVoutput << endl	//also print equivalent scenes for this EV.
-		<< endl;
+	cout	<< "Exposure Variance Equals:	" << EVoutput << endl	//also print equivalent scenes for this EV.
+			<< endl;
 }
 
 // Just used to print text really...
