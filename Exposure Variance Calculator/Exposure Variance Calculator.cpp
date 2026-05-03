@@ -16,7 +16,7 @@ float calculateExposureValue(const float shutterSpeed, const float aperture, con
 }
 
 // Check if input is a valid number
-float getValidNumber(string message) {
+float getValidNumber(const string message) {
     float inputValue;
     while (true) {
         cout << message;
