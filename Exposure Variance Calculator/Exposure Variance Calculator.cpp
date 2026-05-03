@@ -17,11 +17,11 @@ float CalculateExposureVariance(const float shutterSpeed, const float aperture, 
 
 // Check if input is a valid number
 float getValidNumber(string message) {
-    float value;
+    float inputValue;
     while (true) {
         cout << message;
-        if (cin >> value) {
-            return value; // Success! Return the number and exit the loop.
+        if (cin >> inputValue) {
+            return inputValue; // Success! Return the number and exit the loop.
         }
         
         // If we get here, the user typed something wrong
