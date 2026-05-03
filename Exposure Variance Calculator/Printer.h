@@ -26,6 +26,7 @@ void printRepoInf() {
 
 void printTutorial(const bool verbose = false);
 void printTutorial(const bool verbose) {
+	cout	<< "Tutorial:" << endl;
 
 	if (verbose) {
 		cout	<< "[VERBOSE] If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful.";
