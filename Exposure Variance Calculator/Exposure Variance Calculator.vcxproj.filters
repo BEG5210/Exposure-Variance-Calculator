@@ -41,11 +41,11 @@
     <ClInclude Include="CopyrightPrinter.h">
       <Filter>Header Files\Pointless Bullshit that Distracts Me</Filter>
     </ClInclude>
-    <ClInclude Include="Printer.h">
-      <Filter>Header Files\Pointless Bullshit that Distracts Me</Filter>
-    </ClInclude>
     <ClInclude Include="ISODetail.h">
       <Filter>Header Files\Pointless Bullshit that Distracts Me</Filter>
+    </ClInclude>
+    <ClInclude Include="Printer.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
