@@ -1,14 +1,14 @@
+// Don't work on this file yet
 
 #pragma once
 
-#include <iostream>
+// #include <iostream>
 
 class PrintBasicThings {
 public:
-	void printCopy
-
-private:
-
+	void printCopyRight(const bool verbose) {
+		// prints the copyright information, and weather it is verbose or not
+	}
 };
 
 // Just used to print text really...

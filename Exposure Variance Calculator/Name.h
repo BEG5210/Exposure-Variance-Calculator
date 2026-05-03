@@ -1,3 +1,5 @@
+// Don't work on this file yet
+
 #pragma once
 
 #include <iostream>
@@ -11,7 +13,7 @@ class Name {
 public:
 	const string& firstName, lastName, middleName;
 
-	Name() :																		Name(nullptr, nullptr, nullptr, 0b000)				{}	//	Default name
+	Name() :																		Name(nullptr, nullptr, nullptr, 0b000)			{}	//	Default name
 	Name(const string& Name) :														Name(Name, nullptr, nullptr, 0b100)				{}	//	First Name given Only
 	Name(const string& FirstName, const string& LastName) :							Name(FirstName, LastName, nullptr, 0b110)		{}	//	No Middle name is given
 	Name(const string& FirstName, const string& LastName, const string& MiddleName):Name(FirstName, LastName, MiddleName, 0b111)	{}	//	All names are given.
