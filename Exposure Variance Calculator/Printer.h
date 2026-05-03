@@ -1,15 +1,21 @@
+
 #pragma once
 
 #include <iostream>
 using std::cout;
 using std::endl;
 
-void printCopyright(/*const bool verbose*/) {
-	cout	<< "Copyright Information:" << endl
-			<< "	Author:	Thomas Federico" << endl
-			<< "	Last Update:	29 - 4 - 2026" << endl
-			<< endl
-			<< "	This software, its code, and its future and previous versions are under a GNU Affero General Public V3.0 License" << endl
+void printCopyright(const bool verbose = false);
+void printCopyright(const bool verbose) {
+	cout	<< "Copyright Information:" << endl;
+
+	if (verbose) {
+		cout	<< "	Author:	Thomas Federico" << endl
+				<< "	Last Update:	3 - 5 - 2026" << endl
+				<< endl;
+	}
+
+	cout	<< "	This software, its code, and its future and previous versions are under a GNU Affero General Public V3.0 License" << endl
 			<< endl;
 }
 
