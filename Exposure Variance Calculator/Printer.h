@@ -1,3 +1,4 @@
+// Don't work on this file yet
 
 #pragma once
 
@@ -5,7 +6,7 @@
 
 class PrintBasicThings {
 public:
-	void printCopy
+	void printCopy() {}
 
 private:
 
