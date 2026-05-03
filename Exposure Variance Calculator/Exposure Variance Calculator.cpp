@@ -54,7 +54,6 @@ int main()
 	int iniso; 
 
 	// Input Values
-  
 	/* 
 		
 		Changed this to the below input mehtod.
@@ -67,10 +66,9 @@ int main()
 			cout	<< "	input iso: "; cin >> iniso;
 
 		Now even though it completely does not allow something like "abc", "abc1", "a1bc", but it will allow strings such as
-		"1abc" by only taking 1 as the input for the variable and truncating the other left out "abc".
+		"1abc" or "1abc2" by only taking 1 as the input for the variable and truncating the other left out "abc".
 
 	*/
-
 
 	inshutterSpeed = getValidNumber("    input shutter speed value (1/[valToInput]): ");
     inaperture     = getValidNumber("    input aperture value (f[valToInput]): ");// ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
@@ -81,7 +79,8 @@ int main()
 	cout	<< "Inputted Values:" << endl
 			<< "	shutterSpeed:	" << "1/" << inshutterSpeed << "	[" << 1/inshutterSpeed << "]" << endl
 			<< "	aperture:	f/" << inaperture << "	[" << inaperture << "]" << endl
-			<< "	iso:		" << iniso << "	[" << iniso << "]" << endl;
+			<< "	iso:		" << iniso << "	[" << iniso << "]" << endl
+			<< endl;
 
 	// Display Equation
 	cout	<< "Equation [with values subbed in]:	log2[( " << inaperture << "^2 * 100 ) / ( " << 1/inshutterSpeed << " * " << iniso << " )]" << endl
