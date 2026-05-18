@@ -62,11 +62,11 @@ void printEquation(const float shutterSpeed, const float apeature, const int iso
 }
 
 void printEquation() {
-	cout	<< "Equation:	log2[( apeature^2 * 100 ) / ( 1 / shutterSpeed * iso )]" << endl
+	cout	<< "Equation:	log2[( aperture^2 * 100 ) / ( 1 / shutterSpeed * iso )]" << endl
 			<< endl;
 }
 
-//Reccomended you use `CalculateExposureVariance(shutterSpeed, aperture, iso)` if performing this in main.
+//Recommended you use `CalculateExposureVariance(shutterSpeed, aperture, iso)` if performing this in main.
 void printAnswer(const float EVoutput) {
 	cout	<< "Exposure Variance Equals:	" << EVoutput << endl	//also print equivalent scenes for this EV.
 			<< endl;
